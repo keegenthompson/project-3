@@ -22,14 +22,14 @@
         function convert(degrees) {
             var x;
             if (degrees == "C") {
-                x = document.getElementById('C').Value * 9/5 + 32;
+                x = document.getElementById('C').value * 9/5 + 32;
 
                 document.getElementById("F").value = Math.round(x);
             }
 
             else {
 
-                x = (document.getElementById("F").value - 35) * 5/9;
+                x = (document.getElementById("F").value - 32) * 5/9;
 
                 /* (degrees == "F")*/
 
@@ -47,10 +47,10 @@
 <body background="xOb3Wg.jpg">
 <div><h3>Insert a number into one of the input fields below:</h3>
 <label for="C"></label>
-<h4><input onkeyup="convert('C')" id="C"/>Degrees Celcsius</h4>
+<h4><input onkeyup="convert('F')" id="C"/>Degrees Celcsius</h4>
     <h3>Equals</h3>
     <label for="F"></label>
-    <h4><input onkeyup="convert('F')" id="F"/>Degrees Fahrenheit</h4></div>
+    <h4><input onkeyup="convert('C')" id="F"/>Degrees Fahrenheit</h4></div>
 
 
 </form>
