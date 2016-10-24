@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <style>
+        h3 { text-transform: uppercase;
+        }
+        div {
+            background-color: grey;
+            width: 40%;
+            border: double 25px black;
+            padding: 25px;
+            margin-left: 25%;
+        }
+    </style>
+    <script>
+        function convertTemp() {
+            var c =document.getElementById('C');
+            var f =document.getElementById('F');
+            if (c.value!= '' ) {
+            f.value =Math.round(c.value * 9/5 + 32);
+                c.value = '';
+            }
+
+            else {
+               c.value =Math.round((f.value - 32) * 5/9);
+                f.value = '';
+            }
+        }
+    </script>
+</head>
+<body background="xOb3Wg.jpg">
+<div><h3>Insert a number into one of the input fields below:</h3>
+
+
+
+    <h4><input  id="C"/>Degrees Celcsius</h4>
+
+    <button type="button" id="Equals" onclick="convertTemp()">Equals</button> Click to convert from C to F or F to C.
+
+   <h4><input  id="F"/>Degrees Fahrenheit</h4></div>
+
+
+</form>
+</body>
+</html>
